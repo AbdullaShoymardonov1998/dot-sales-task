@@ -13,3 +13,10 @@ Password
 ```
 #dyvvY6g+R$W9cP
 ```
+
+Swagger
+
+```
+http://38.242.252.210:4000/api
+
+```
