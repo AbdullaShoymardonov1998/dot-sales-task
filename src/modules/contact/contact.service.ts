@@ -30,9 +30,7 @@ export class ContactService {
     if (status === 401) {
       const newToken = await this.getAccessToken();
       this.token = newToken;
-      console.log(newToken);
     }
-
     if (data) {
       const contactId = data._embedded.contacts[0].id;
       await this.updateContact(contactId, query);
@@ -166,9 +164,6 @@ export class ContactService {
         validateStatus: () => true,
         data: config,
       });
-
-      console.log(data);
-      console.log(status);
       const accessToken = data.access_token;
 
       return `Bearer ${accessToken}`;
